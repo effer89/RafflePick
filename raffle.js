@@ -44,4 +44,4 @@ if(curUrl.indexOf('raffle') === 1){
 
 setTimeout(function(){
 	window.location = host+'/free-raffles';
-},60000);
+},1000);
