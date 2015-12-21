@@ -9,7 +9,13 @@ function getSlots() {
 	    window.location = host+'/free-raffles';
 	}
 	if(slotsAvail.length > 0){
-		var slot = slotsAvail[0];
+
+		var max = 0,
+			min = slotsAvail.length,
+			selectedSlot = Math.floor(Math.random() * (max - min) + min);
+
+		//var slot = slotsAvail[0];
+		var slot = slotsAvail[selectedSlot];
 		$(slot).trigger('click');
 
 		if(button.is(':visible')){
